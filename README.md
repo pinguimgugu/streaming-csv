@@ -6,10 +6,10 @@ Basic example to provide a large csv reading data from database using streaming 
  - Docker compose
 
 Start application
-  # build and runnig all stack on the fist time you need wait a lot time because the process will be create all user registers
+  # build and runnig all stack on the fist time you need wait a some time because the process will be create all user registers
   ./application serve
 
-  # get all dependency applicationu 
+  # get all dependency application 
   ./application dep
 
   # run application 
