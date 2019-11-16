@@ -1,0 +1,29 @@
+version: '2'
+services:
+  streaming_csv:
+    image: go-tools
+    ports:
+      - 7000:1323
+    env_file: 
+      - .env
+    volumes:
+      - ./:/go/src/github.com/pinguimgugu/streaming-csv
+    working_dir: /go/src/github.com/pinguimgugu/streaming-csv
+    command: go run main.go
+    depends_on:
+      - mongo.local
+  mongo.local:
+    image: mongo:latest
+    environment:
+      -MONGO_INITDB_ROOT_USERNAME: root
+      -MONGO_INITDB_ROOT_PASSWORD: root
+    ports:
+      - 27017:27017
+    volumes:
+      - /app/hdp/mongo/data:/data/db
+  dep:
+    image: go-tools
+    volumes:
+    - ./:/go/src/app
+    working_dir: /go/src/app
+    command: dep ensure -v
