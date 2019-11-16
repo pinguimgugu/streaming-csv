@@ -6,7 +6,7 @@ Basic example to provide a large csv reading data from database using streaming 
  - Docker compose
 
 Start application
-  # build and runnig all stack on the fist time you need wait a some time because the process will be create all 300.000 user registers
+  # build and runnig all stack on the fist time you need wait a some time because the process will be create all 100.000 user registers
   ./application serve
 
   # get all dependency application 
@@ -21,5 +21,5 @@ Start application
   # to create registers of users
   ./application.sh create_users
 
-# Open this path in your browser to get csv with 300000 lines in little bit time
+# Open this path in your browser to get csv with 100000 lines in little bit time
   http://localhost:7000/users/csv
