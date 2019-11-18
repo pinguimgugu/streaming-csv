@@ -6,17 +6,17 @@ Basic example to provide a large csv reading data from database using streaming 
  - Docker compose
 
 Start application
-  # build and runnig all stack on the fist time you need wait a some time because the process will be create all 100.000 user registers
-  ./application serve
+  # build and running all stack on the fist time you need wait a some time because the process will be create all 100.000 user registers
+  ./application.sh serve
 
   # get all dependency application 
-  ./application dep
+  ./application.sh dep
 
   # run application 
-  ./application run
+  ./application.sh run
 
   # build base image with golang and dependencies manager dep
-  ./application build
+  ./application.sh build
 
   # to create registers of users
   ./application.sh create_users
