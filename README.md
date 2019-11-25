@@ -1,4 +1,4 @@
-# Streming data provider
+# Streaming data provider
 
 Basic example to provide a large csv reading data from database using streaming to make then response more faster
 
